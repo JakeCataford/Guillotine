@@ -9,7 +9,8 @@ module Guillotine
     rescue Exception => e
       if Rails.env.production?
         #we dont really care if this fails, it just means it was a regular comment.
-        puts "command #{command_string} not found... continuing..."
+        puts "command #{command_string} not found... Actual error message below this line:"
+        puts e.message
       else
         #On non-production builds, we raise the exception so its easier to see what is going on.
         raise e
