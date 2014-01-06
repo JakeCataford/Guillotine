@@ -11,10 +11,8 @@ Gem::Specification.new do |s|
   s.email       = ["Contact@JakeCataford.com"]
   s.homepage    = "Github.com"
   s.summary     = "A Webhook Parsing Script Executor for Rails"
-  s.description = "TODO: Description of Guillotine."
+  s.description = "This gem takes incoming strings and parses them bash-command like style allowing you to run commands from your favorite service that provides web hooks or via some ui element. See the README for more info."
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
   s.test_files = Dir["test/**/*"]
-
-  
 end
