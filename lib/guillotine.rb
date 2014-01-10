@@ -6,9 +6,7 @@ module Guillotine
     begin
       excecutor = Object.const_get("Executors").const_get(command_array.shift.capitalize)
       response = excecutor.send(command_array.shift.downcase.to_sym, opts, *command_array)
-    rescue Exception => e
-      logger.info "\nCommand #{command_string} not found... Actual error message below this line:\n"
-      logger.info e.message
+    rescue NameError => e
       return nil
     end
     if response.nil?
