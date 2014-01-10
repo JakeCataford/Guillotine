@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.version     = Guillotine::VERSION
   s.authors     = ["Jake Cataford"]
   s.email       = ["Contact@JakeCataford.com"]
-  s.homepage    = "Github.com"
+  s.homepage    = "https://github.com/JakeCataford/Guillotine/"
   s.summary     = "A Webhook Parsing Script Executor for Rails"
   s.description = "This gem takes incoming strings and parses them bash-command like style allowing you to run commands from your favorite service that provides web hooks or via some ui element. See the README for more info."
 
