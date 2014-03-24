@@ -7,7 +7,11 @@ module Guillotine
       excecutor = Object.const_get("Executors").const_get(command_array.shift.capitalize)
       response = excecutor.send(command_array.shift.downcase.to_sym, opts, *command_array)
     rescue NameError => e
-      return nil
+      if Rails.env.production?
+        return nil
+      else
+        raise e
+      end
     end
     if response.nil?
       return true
